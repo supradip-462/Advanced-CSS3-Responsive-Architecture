@@ -63,17 +63,13 @@ Second_Project/
 You can run and preview this project using any of the following methods:
 
 ### Method 1: Direct File Opening (No Server Required)
-1. Open File Explorer and navigate to the project directory:
-   `g:\Internship-Thinex\Web Development\Second_Project`
+1. Open File Explorer and navigate to your project folder.
 2. **Double-click `index.html`** (or right-click `index.html` ➔ **Open with** ➔ **Google Chrome / Microsoft Edge / Firefox**).
 
 ---
 
 ### Method 2: Python Localhost Server
-1. Open **PowerShell** or **Command Prompt** in the project directory:
-   ```bash
-   cd "g:\Internship-Thinex\Web Development\Second_Project"
-   ```
+1. Open **PowerShell** or **Command Prompt** in your project folder.
 2. Run the HTTP server command:
    ```bash
    python -m http.server 8000
