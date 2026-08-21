@@ -1,0 +1,219 @@
+/* ==========================================================================
+   MAIN STYLESHEET (CONSOLIDATED)
+   Project: Supradip Bhattacharjee — Advanced CSS3 Portfolio
+   ========================================================================== */
+
+@import url('variables.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* --------------------------------------------------------------------------
+   1. Extra Animations & Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.6s; }
+
+/* --------------------------------------------------------------------------
+   2. Background Grid Overlay & Ambient Blobs
+   -------------------------------------------------------------------------- */
+.bg-ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  transition: opacity var(--transition-slow);
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--accent-primary);
+}
+
+.blob-2 {
+  bottom: 10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--accent-secondary);
+}
+
+.blob-3 {
+  top: 40%;
+  left: 30%;
+  width: 450px;
+  height: 450px;
+  background: var(--accent-tertiary);
+  opacity: 0.15;
+}
+
+[data-theme="light"] .ambient-blob {
+  opacity: 0.12;
+}
+
+/* --------------------------------------------------------------------------
+   3. Experience Timeline (About Page)
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border-medium);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem - 6px);
+  top: 0.25rem;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-primary);
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-role {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.timeline-company {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Footer Styling
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-desc {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  max-width: 300px;
+}
+
+.footer-col-title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--accent-primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  background: var(--gradient-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.footer-bottom {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Supradip Bhattacharjee — Full Stack Developer & UI/UX Designer. Explore modern CSS3 responsive portfolio, skills, projects, and contact info." />
+  <meta name="keywords" content="Supradip Bhattacharjee, CSS3 Grid, Flexbox, Portfolio, Web Developer, Full Stack, UI UX" />
+  <meta name="author" content="Supradip Bhattacharjee" />
+  <meta property="og:title" content="Supradip Bhattacharjee | Advanced CSS3 Portfolio" />
+  <meta property="og:description" content="Full Stack Developer & UI/UX Designer crafting visually stunning, responsive digital experiences." />
+  <meta property="og:type" content="website" />
+  <title>Supradip Bhattacharjee | Advanced CSS3 Portfolio</title>
+  
+  <!-- Modern Typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Theme Handler Script (Prevents flash of unstyled theme) -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Background Ambient Glow Blobs -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="btn btn-primary" style="position: absolute; top: -100px; left: 1rem; z-index: 999; transition: top 0.2s;" onfocus="this.style.top='1rem'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR (Flexbox Alignment & Sticky Glass Header)
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Supradip Bhattacharjee Home">
+        <span class="logo-code">&lt;/&gt;</span>
+        <span>Supradip<span class="logo-accent">B.</span></span>
+      </a>
+
+      <!-- Desktop Nav Links (Flexbox) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Controls (Theme Switcher & Mobile Toggle) -->
+      <div class="nav-controls">
+        <!-- Dynamic Light/Dark Theme Switcher Toggle -->
+        <button class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+          <span class="theme-icon-sun" aria-hidden="true">☀️</span>
+          <span class="theme-icon-moon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-label="Toggle Mobile Navigation Menu">
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ----------------------------------------------------------------------
+         1. HERO SECTION (CSS Grid 2D Two-Column Architectural Layout)
+         ---------------------------------------------------------------------- -->
+    <section class="section hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Column 1: Hero Text & Call to Action (Flexbox alignment) -->
+          <div class="hero-text flex-column gap-md fade-in-up">
+            <div class="badge">
+              <span>🚀 Available for New Projects & Internships</span>
+            </div>
+            
+            <h1 id="hero-title" class="section-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.15; text-align: left;">
+              Hi, I'm <span class="gradient-text">Supradip Bhattacharjee</span>
+            </h1>
+            
+            <p style="font-size: var(--fs-xl); color: var(--text-secondary); font-weight: var(--fw-medium);">
+              Full Stack Web Developer &amp; <span style="color: var(--accent-primary);">UI/UX Architect</span>
+            </p>
+            
+            <p style="color: var(--text-secondary); max-width: 540px; font-size: var(--fs-base);">
+              Passionate about engineering pixel-perfect web applications using modern CSS3 Grid &amp; Flexbox architectures, clean JavaScript logic, dynamic light/dark themes, and intuitive UI interactions.
+            </p>
+            
+            <!-- Hero CTA Buttons -->
+            <div class="flex-wrap gap-md" style="margin-top: 1rem;">
+              <a href="projects.html" class="btn btn-primary">
+                <span>View My Work</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <span>Get In Touch</span>
+              </a>
+            </div>
+
+            <!-- Stats Grid Component (CSS Grid 2D) -->
+            <div class="stats-grid" role="list" aria-label="Career Statistics">
+              <div class="stat-card" role="listitem">
+                <div class="stat-number" data-target="3" data-suffix="+">3+</div>
+                <div class="stat-label">Years Exp.</div>
+              </div>
+              <div class="stat-card" role="listitem">
+                <div class="stat-number" data-target="20" data-suffix="+">20+</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div class="stat-card" role="listitem">
+                <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+                <div class="stat-label">Satisfied Clients</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Avatar Visual & Micro-animated Floating Badges -->
+          <div class="hero-visual-container fade-in-up delay-2">
+            <div class="avatar-wrapper">
+              <div class="avatar-fallback">SB</div>
+            </div>
+
+            <!-- Floating Glass Badges -->
+            <div class="floating-badge floating-badge-1">
+              <span>🎨</span> <span>Advanced CSS3</span>
+            </div>
+            <div class="floating-badge floating-badge-2">
+              <span>⚡</span> <span>Flexbox &amp; Grid</span>
+            </div>
+            <div class="floating-badge floating-badge-3">
+              <span>🌙</span> <span>Dynamic Themes</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         2. CORE SKILLS SECTION (CSS Grid Multi-Column Auto Layout)
+         ---------------------------------------------------------------------- -->
+    <section class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header fade-in-up">
+          <h2 id="skills-title" class="section-title">Core Technical Skills</h2>
+          <p class="section-subtitle">Proficiencies in modern web architecture, CSS3 standards, and frontend frameworks.</p>
+        </header>
+
+        <!-- 2D CSS Grid Layout for Skill Cards -->
+        <div class="skills-grid" role="list">
+          
+          <!-- Skill Card 1 -->
+          <article class="skill-card fade-in-up delay-1" role="listitem">
+            <div class="skill-header">
+              <div class="skill-title-wrap">
+                <span class="skill-icon" aria-hidden="true">🌐</span>
+                <h3 class="skill-name">HTML5 &amp; Accessibility</h3>
+              </div>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Semantic markup, ARIA standards, Lighthouse 100 audits</p>
+            <div class="skill-track">
+              <div class="skill-fill" data-target="95%"></div>
+            </div>
+          </article>
+
+          <!-- Skill Card 2 -->
+          <article class="skill-card fade-in-up delay-2" role="listitem">
+            <div class="skill-header">
+              <div class="skill-title-wrap">
+                <span class="skill-icon" aria-hidden="true">🎨</span>
+                <h3 class="skill-name">Advanced CSS3 Architecture</h3>
+              </div>
+              <span class="skill-percentage">92%</span>
+            </div>
+            <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Grid 2D layouts, Flexbox alignment, CSS variables, Media queries</p>
+            <div class="skill-track">
+              <div class="skill-fill" data-target="92%"></div>
+            </div>
+          </article>
+
+          <!-- Skill Card 3 -->
+          <article class="skill-card fade-in-up delay-3" role="listitem">
+            <div class="skill-header">
+              <div class="skill-title-wrap">
+                <span class="skill-icon" aria-hidden="true">⚡</span>
+                <h3 class="skill-name">JavaScript &amp; DOM APIs</h3>
+              </div>
+              <span class="skill-percentage">88%</span>
+            </div>
+            <p style="font-size: var(--fs-xs); color: var(--text-secondary);">ES6+ syntax, Async/Await, Web Storage, Event Delegation</p>
+            <div class="skill-track">
+              <div class="skill-fill" data-target="88%"></div>
+            </div>
+          </article>
+
+          <!-- Skill Card 4 -->
+          <article class="skill-card fade-in-up delay-4" role="listitem">
+            <div class="skill-header">
+              <div class="skill-title-wrap">
+                <span class="skill-icon" aria-hidden="true">⚛️</span>
+                <h3 class="skill-name">React &amp; Modern Frameworks</h3>
+              </div>
+              <span class="skill-percentage">84%</span>
+            </div>
+            <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Component state, Custom Hooks, Context API, Next.js basics</p>
+            <div class="skill-track">
+              <div class="skill-fill" data-target="84%"></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         3. FEATURED PROJECTS SECTION (CSS Grid 2D Showcase Cards)
+         ---------------------------------------------------------------------- -->
+    <section class="section" aria-labelledby="featured-projects-title">
+      <div class="container">
+        <header class="section-header fade-in-up">
+          <h2 id="featured-projects-title" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A spotlight selection of recent web projects crafted with modern CSS3 techniques.</p>
+        </header>
+
+        <!-- 2D CSS Grid Layout for Projects Showcase -->
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card fade-in-up delay-1" data-category="fullstack">
+            <div class="project-img-box">
+              <div class="project-img-placeholder" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);">
+                🛒 ShopNow
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project-id="shopnow">Quick View</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-chip">React</span>
+                <span class="tag-chip">Node.js</span>
+                <span class="tag-chip">CSS Grid</span>
+              </div>
+              <h3 class="project-title">ShopNow E-Commerce</h3>
+              <p class="project-desc">A full-featured responsive e-commerce web platform with real-time product search and payment gateway sandbox.</p>
+              <div class="project-footer">
+                <button class="project-details-btn open-modal-btn" data-project-id="shopnow">
+                  <span>Explore Details</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card fade-in-up delay-2" data-category="frontend">
+            <div class="project-img-box">
+              <div class="project-img-placeholder" style="background: linear-gradient(135deg, #059669 0%, #0d9488 100%);">
+                📊 Analytics
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project-id="analytics">Quick View</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-chip">Vue.js</span>
+                <span class="tag-chip">Flexbox</span>
+                <span class="tag-chip">D3.js</span>
+              </div>
+              <h3 class="project-title">Analytics Dashboard</h3>
+              <p class="project-desc">Interactive real-time metrics dashboard with custom theme switcher and responsive 2D grid charts.</p>
+              <div class="project-footer">
+                <button class="project-details-btn open-modal-btn" data-project-id="analytics">
+                  <span>Explore Details</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card fade-in-up delay-3" data-category="uiux">
+            <div class="project-img-box">
+              <div class="project-img-placeholder" style="background: linear-gradient(135deg, #db2777 0%, #9333ea 100%);">
+                ✨ Portfolio
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project-id="portfolio">Quick View</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-chip">HTML5</span>
+                <span class="tag-chip">CSS3 Grid</span>
+                <span class="tag-chip">JS Theme</span>
+              </div>
+              <h3 class="project-title">Advanced CSS3 Portfolio</h3>
+              <p class="project-desc">Visually stunning, accessible portfolio site built with pure CSS variables and responsive media queries.</p>
+              <div class="project-footer">
+                <button class="project-details-btn open-modal-btn" data-project-id="portfolio">
+                  <span>Explore Details</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Section CTA Button -->
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="projects.html" class="btn btn-secondary">
+            <span>Explore All Projects</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         4. CALL TO ACTION BANNER (Glassmorphism & Flexbox Alignment)
+         ---------------------------------------------------------------------- -->
+    <section class="section" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="glass-card flex-between flex-wrap gap-lg" style="background: var(--gradient-accent); color: #ffffff; padding: 3rem;">
+          <div>
+            <h2 style="font-size: var(--fs-2xl); font-weight: var(--fw-bold); margin-bottom: 0.5rem; color: #ffffff;">Have a project idea in mind?</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: var(--fs-base);">Let's collaborate to build clean, modern, and high-performance digital experiences.</p>
+          </div>
+          <a href="contact.html" class="btn" style="background: #ffffff; color: var(--text-inverse); font-weight: var(--fw-bold);">
+            Let's Talk Together
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       PROJECT MODAL WINDOW (Accessible Dialog Component)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Project Modal Window">✕</button>
+      
+      <span class="badge" id="modal-category">Project Category</span>
+      <h2 id="modal-title" style="margin: 0.75rem 0 1rem 0; font-size: var(--fs-2xl);">Project Details</h2>
+      
+      <p id="modal-desc" style="color: var(--text-secondary); font-size: var(--fs-base); margin-bottom: 1.5rem;">Project details description text will load here.</p>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: var(--fs-sm); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">Technologies Used</h4>
+        <div id="modal-tags" class="project-tags"></div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h4 style="font-size: var(--fs-sm); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">Key Architecture Features</h4>
+        <ul id="modal-features" style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: var(--fs-sm); color: var(--text-secondary);"></ul>
+      </div>
+
+      <div class="flex-wrap gap-md">
+        <a id="modal-demo-link" href="#" target="_blank" class="btn btn-primary">Live Demo</a>
+        <a id="modal-repo-link" href="#" target="_blank" class="btn btn-secondary">GitHub Source</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top Floating Scroll Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top of page">↑</button>
+
+  <!-- ==========================================================================
+       FOOTER (CSS Grid Multi-Column Responsive Architecture)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-code">&lt;/&gt;</span>
+            <span>Supradip<span class="logo-accent">B.</span></span>
+          </a>
+          <p class="footer-desc">
+            Crafting elegant, accessible, and responsive user experiences through clean code and modern CSS3 layout architectures.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Me</a></li>
+            <li><a href="projects.html" class="footer-link">Projects Showcase</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Tech Stack -->
+        <div>
+          <h4 class="footer-col-title">CSS3 Features</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">2D CSS Grid Layouts</span></li>
+            <li><span class="footer-link">Flexbox Component Alignment</span></li>
+            <li><span class="footer-link">Mobile-First Media Queries</span></li>
+            <li><span class="footer-link">Dynamic CSS Custom Variables</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Social Connect -->
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-icon-btn" aria-label="GitHub Profile">🐙</a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn Profile">💼</a>
+            <a href="https://twitter.com" target="_blank" class="social-icon-btn" aria-label="Twitter Profile">🐦</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Supradip Bhattacharjee. All rights reserved.</p>
+        <p>Built with ❤️ using pure HTML5, Advanced CSS3 &amp; Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
